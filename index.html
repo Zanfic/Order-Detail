@@ -1,20 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
+  <title>Borang Order</title>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Laman Aku</title>
-  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="overlay">
-    <h1>Zanfic</h1>
-    <p>Welcome to my world 🌍</p>
-    <div class="links">
-      <a href="https://https://www.instagram.com/zanfic.official_?igsh=OHZpejh1bXZkcGNp/" target="_blank">Instagram</a>
-      <a href="https://https://www.tiktok.com/@zanfic.official?_t=ZS-8zIjUqsVsDY&_r=1/" target="_blank">TikTok</a>
-      <a href="https://shop.com/" target="_blank">Shop</a>
-    </div>
-  </div>
+  <h2>Borang Order</h2>
+  <form id="orderForm">
+    <label>Nama:</label><br>
+    <input type="text" id="nama" required><br><br>
+
+    <label>No. Phone:</label><br>
+    <input type="tel" id="phone" required><br><br>
+
+    <label>Size:</label><br>
+    <select id="size" required>
+      <option value="">-- Pilih Size --</option>
+      <option value="XS">XS</option>
+      <option value="S">S</option>
+      <option value="M">M</option>
+      <option value="L">L</option>
+      <option value="XL">XL</option>
+    </select><br><br>
+
+    <label>Alamat:</label><br>
+    <textarea id="alamat" required></textarea><br><br>
+
+    <button type="submit">Submit & Pay</button>
+  </form>
+
+  <script>
+    document.getElementById("orderForm").addEventListener("submit", function(event){
+      event.preventDefault();
+
+      // sini kau letak link payment (contoh ToyyibPay / Billplz)
+      window.location.href = "file:///C:/Users/Hi/Desktop/zanfic/index%20(5).html";
+    });
+  </script>
 </body>
 </html>
